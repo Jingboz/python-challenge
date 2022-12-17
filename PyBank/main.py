@@ -37,7 +37,8 @@ def readfile(csv_path):
 # Input string results
 # Output N/A
 def writefile(results):
-    with open("Output.txt","w") as textfile:
+    output_path = os.path.join(".", "analysis","Result.txt")
+    with open(output_path,"w") as textfile:
         textfile.write(results)
 
 # Blow is the main function of this project
