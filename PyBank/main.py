@@ -41,7 +41,7 @@ def writefile(results):
     with open(output_path,"w") as textfile:
         textfile.write(results)
 
-# Blow is the main function of this project
+# Below is the main function of this project
 
 # read and store the budget_data.csv file into a dictionary
 bank_dict = readfile(os.path.join(".", "Resources","budget_data.csv"))
