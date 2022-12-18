@@ -10,7 +10,7 @@ def readfile(csv_path):
     full_list = []
     with open(csv_path) as csvfile:
         csvreader = csv.reader(csvfile,delimiter=',')
-        next(csvreader,None)
+        headerrow = next(csvreader,None)
         for row in csvreader:
             name_set.add(row[2])
             full_list.append(row[2])

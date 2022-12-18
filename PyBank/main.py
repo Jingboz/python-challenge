@@ -25,7 +25,7 @@ def readfile(csv_path):
     budget_list = []
     with open(csv_path) as csvfile:
         csvreader = csv.reader(csvfile,delimiter=',')
-        next(csvreader,None)
+        headerrow = next(csvreader,None)
         for row in csvreader:
             date_list.append(row[0])
             budget_list.append(int(row[1]))
