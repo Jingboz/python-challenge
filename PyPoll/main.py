@@ -4,7 +4,7 @@ import csv
 # This readfile function will read through csv file with given path and skip the first header line, 
 # and it returns a dictionary with a list of unrepeatable candidate names and a list of names in the poll 
 # Input filepath
-# Output Dict name_dict
+# Output Dict name_dict: value under key "name" will be a list of unrepeatable names, and "full_list" contains the full list of names in the poll
 def readfile(csv_path):
     name_set = set()
     full_list = []
@@ -21,7 +21,7 @@ def readfile(csv_path):
 
 # This count founction is for counting how many votes each candidate gets
 # Input list components: a list of unrepeatable candidate names
-# Input list dataset_list: the list of the whole poll
+# Input list dataset_list: the list of the votes in the poll
 # Output list count_list
 def count(components, dataset_list):
     count_list = [0]*len(components)
